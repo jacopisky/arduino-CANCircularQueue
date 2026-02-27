@@ -1,0 +1,7 @@
+CANCircularQueue	KEYWORD1
+initQueue	KEYWORD2
+isEmpty	KEYWORD2
+isFull	KEYWORD2
+size	KEYWORD2
+enqueue	KEYWORD2
+dequeue	KEYWORD2

@@ -1,7 +1,7 @@
 
 #include "CANCircularQueue.h"
 
-bool initQueue(CANCircularQueue *queue, int capacity) {
+bool initQueue(CANCircularQueue *queue, uint8_t capacity) {
     if (capacity > CAN_QUEUE_MAX_SIZE) {
         return false;
     }
@@ -15,7 +15,7 @@ bool initQueue(CANCircularQueue *queue, int capacity) {
     return true;
 }
 
-int size(CANCircularQueue *queue) {
+uint8_t size(CANCircularQueue *queue) {
 	if (queue->rear >= queue->front) {
 		return (queue->rear - queue->front);
 	}
@@ -42,7 +42,7 @@ bool enqueue(CANCircularQueue *queue, can_frame data) {
 }
 
 can_frame dequeue(CANCircularQueue *queue) {
-    can_frame data;s
+    can_frame data;
     if (isEmpty(queue)) {
         return data;
     }

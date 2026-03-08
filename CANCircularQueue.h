@@ -15,8 +15,8 @@ typedef struct {
     int rear;
 } CANCircularQueue;
 
-void initQueue(CANCircularQueue *queue);
-int size(CANCircularQueue *queue);
+bool initQueue(CANCircularQueue *queue, uint8_t capacity);
+uint8_t size(CANCircularQueue *queue);
 bool isEmpty(CANCircularQueue *queue);
 bool isFull(CANCircularQueue *queue);
 bool enqueue(CANCircularQueue *queue, can_frame data);
